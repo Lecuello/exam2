@@ -21,15 +21,15 @@ public class Samsung implements Equipo {
      }
     
      public void off(){
-         System.out.println("Equipo.off");
+         System.out.println("Equipo off");
      }
      
     public void on(){
-         System.out.println("Equipo.on");
+         System.out.println("Equipo on");
     }
     
     public void call(){
-         System.out.println("Equipo.call");
+         System.out.println("Equipo call");
     }
     
      public void conectar(){
