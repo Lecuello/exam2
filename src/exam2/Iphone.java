@@ -5,6 +5,8 @@
  */
 package exam2;
 
+import exam2.adapter.IAdapter;
+
 /**
  *
  * @author lorna

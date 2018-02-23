@@ -5,12 +5,20 @@
  */
 package exam2;
 
+import exam2.adapter.IAdapter;
+
 /**
  *
  * @author lorna
  */
 public class Samsung implements Equipo {
     private String microusb;
+    
+     private IAdapter conexion;
+     
+     public Samsung (IAdapter con) {
+         this.conexion = con;
+     }
     
      public void off(){
          System.out.println("Equipo.off");
@@ -25,6 +33,7 @@ public class Samsung implements Equipo {
     }
     
      public void conectar(){
-         System.out.println("Coenctado Samsung");
+         System.out.println("Samsung");
+          conexion.conectar();
     }
 }

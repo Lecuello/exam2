@@ -7,6 +7,7 @@ package exam2;
 
 import exam2.adapter.AdaptadorEuropa;
 import exam2.adapter.AdaptadorUSA;
+import exam2.adapter.IAdapter;
 
 
 /**
@@ -20,16 +21,27 @@ public class Exam2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-       
-        AdaptadorEuropa conector = new AdaptadorEuropa(new Europa());
-        conector.conectar();
-        
-        AdaptadorUSA conector1 = new AdaptadorUSA(new USA());
-        conector1.conectar();
-        
-        IAdapter adap = (IAdapter)new AdaptadorEuropa(new Europa());
-        Iphone iphone = new Iphone(adap);
+        //Impresion Europa
+       IAdapter adapE = (IAdapter)new AdaptadorEuropa(new Europa());
+        Iphone iphone = new Iphone(adapE);
         iphone.conectar();
+        IAdapter adap = (IAdapter)new AdaptadorEuropa(new Europa());
+        Samsung sam = new Samsung (adap);
+          sam.conectar();
+          
+         System.out.println();
+         
+          //Impresion USA
+         IAdapter adapU = (IAdapter)new AdaptadorUSA(new USA());
+        Iphone iphone1 = new Iphone(adapU);
+        iphone1.conectar();
+        IAdapter adapus = (IAdapter)new AdaptadorUSA(new USA());
+        Samsung samu = new Samsung (adapus);
+          samu.conectar();
+     
+        
+        
+      
     }
     
 }
