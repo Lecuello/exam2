@@ -6,6 +6,7 @@
 package exam2.adapter;
 
 import exam2.Europa;
+import exam2.Iphone;
 
 /**
  *

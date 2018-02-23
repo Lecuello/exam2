@@ -13,4 +13,5 @@ public interface Equipo {
     public void off();
     public void on();
     public void call();
+    
 }

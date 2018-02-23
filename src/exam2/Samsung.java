@@ -23,4 +23,8 @@ public class Samsung implements Equipo {
     public void call(){
          System.out.println("Equipo.call");
     }
+    
+     public void conectar(){
+         System.out.println("Coenctado Samsung");
+    }
 }

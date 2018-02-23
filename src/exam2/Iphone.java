@@ -12,7 +12,13 @@ package exam2;
 public class Iphone implements Equipo {
     private String usbc;
     
-     public void off(){
+       private IAdapter conexion;
+     
+     public Iphone (IAdapter con) {
+         this.conexion = con;
+     }
+    
+    public void off(){
           System.out.println("Equipo.off");
      }
      
@@ -24,4 +30,8 @@ public class Iphone implements Equipo {
          System.out.println("Equipo.call");
     }
 
+    public void conectar(){
+        System.out.println("Iphone");
+    conexion.conectar();
+    }
 }
